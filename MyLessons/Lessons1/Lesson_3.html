@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Lesson 3</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/ext-all.css" />
+    <script type="text/javascript" src="../adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../ext-all-debug.js"></script>
+    <script type="text/javascript">
+        Ext.BLANK_IMAGE_URL = '../resources/images/default/s.gif';
+        Ext.onReady(function(){
+            var colorsStore = new Ext.data.SimpleStore({
+                fields: ['name'],
+                data: [['Blue'], ['Red'], ['White']]
+            });
+
+            var combo = new Ext.form.ComboBox({
+                store: colorsStore,
+                displayField: 'name',
+                typeAhead: true,
+                mode: 'local',
+                forceSelection: true,
+                triggerAction: 'all',
+                emptyText: 'Select a color...',
+                selectOnFocus: true,
+                applyTo: 'colors-combo',
+                id: 'colors-combo'    
+            });
+
+            // Get a reference to the combobox using Ext.getCmp().
+            var combo = Ext.getCmp("colors-combo");
+
+            // Using the reference to the combo, add a handler to the 'select' event.
+            combo.on('Select', function(){
+                Ext.Msg.alert('Using Ext.getCmp(id)', 'You selected ' + combo.getValue());
+            })
+         })
+    </script>
+</head>
+<body>
+    <input type="text" id="colors-combo" />
+</body>
+</html>

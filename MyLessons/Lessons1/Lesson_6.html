@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Lesson 6</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/ext-all.css" />
+    <script type="text/javascript" src="../adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../ext-all-debug.js"></script>
+    <script type="text/javascript">
+        Ext.BLANK_IMAGE_URL = '../resources/images/default/s.gif';
+        Ext.onReady(function(){
+            var selectedColors = {
+                color1: 'Blue',
+                color2: 'Red',
+                color3: 'White'
+            };
+
+            var encodedUrl = Ext.urlEncode(selectedColors);
+
+            //encodedUrl = location.search;
+
+            var selectedColors = Ext.urlDecode(encodedUrl);
+        });
+     </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Lesson 1</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/ext-all.css" />
+    <script type="text/javascript" src="../adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../ext-all-debug.js"></script>
+    <script type="text/javascript">
+        Ext.BLANK_IMAGE_URL = '../resources/images/default/s.gif';
+        Ext.onReady(function() {
+            var browser = "";
+            if(Ext.isChrome) {
+                browser = "Chrome";
+            }
+            if(Ext.isGecko) {
+                browser = "Gecko";
+            }
+            if(Ext.isGecko2) {
+                browser = "Gecko2";
+            }
+            if(Ext.isGecko3) {
+                browser = "Gecko3";
+            }
+            if(Ext.isIE) {
+                browser = "IE";
+            }
+            if(Ext.isIE6) {
+                browser = "IE6";
+            }
+            if(Ext.isIE7) {
+                browser = "IE7";
+            }
+            if(Ext.isIE8) {
+                browser = "IE8";
+            }
+            if(Ext.isOpera) {
+                browser = "Opera";
+            }
+            if(Ext.isSafari) {
+                browser = "Safari";
+            }
+            if(Ext.isSafari2) {
+                browser = "Safari2";
+            }
+            if(Ext.isSafari3) {
+                browser = "Safari3";
+            }
+            if(Ext.isSafari4) {
+                browser = "Safari4";
+            }
+
+            var platform = "";
+            if(Ext.isAir) {
+                platform = "Air";
+            }
+            if(Ext.isLinux) {
+                platform = "Linux";
+            }
+            if(Ext.isMac) {
+                platform = "Mac";
+            }
+            if(Ext.isWindows) {
+                platform = "Windows";
+            }
+
+            var msg = "Tour browser is " + browser + ", and your platform is " + platform;
+            Ext.Msg.alert('Browser and Platform', msg);
+        })
+    </script>
+</head>
+</html>

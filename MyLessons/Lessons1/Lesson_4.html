@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Lesson 4</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/ext-all.css" />
+    <script type="text/javascript" src="../adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="../ext-all-debug.js"></script>
+    <script type="text/javascript">
+        Ext.BLANK_IMAGE_URL = '../resources/images/default/s.gif';
+        Ext.onReady(function(){
+ 
+            // Get all the div elemeents.
+            var nodes = Ext.query('div');
+            Ext.each(nodes, function(item, index, allItems){
+                document.write(index + '<br/>');
+            });
+ 
+            // document.write('<br/>');
+ 
+            // var msgLinks = Ext.query('.msg');
+            // Ext.each(msgLinks, function(item, index){
+            //     document.write(index + '<br/>');
+            // });
+
+            // var select = Ext.get('countries-select');
+            // Ext.each(select.options, function(item, index){
+            //     document.write(index + '<br/>');
+            // });
+
+        });
+     </script>
+</head>
+<body>
+    <div id="div-1">This is the first div</div>
+    <div id="div-2" class="msg">This is the first div</div>
+    <div id="div-3">This is the first div</div>
+</body>
+</html>
